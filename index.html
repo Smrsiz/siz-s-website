@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Siz's Socials</title>
+  </head>
+  <body>
+    <button data-url="https://www.youtube.com/@Sizwithrizz/">Youtube channel</button>
+    <button data-url="https://discord.gg/NS89UreHMx">Discord Server</button>
+    <button data-url="https://twitter.com/SmrSiz">Twitter</button>
+    
+    <div id="output"></div>
+
+    <script>
+      // Function to handle button click
+      function handleClick(url) {
+        window.location.href = url;
+      }
+
+      // Attach click event listener to all buttons
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          handleClick(button.getAttribute('data-url')); // Redirect to the URL specified in button's data-url attribute
+        });
+      });
+    </script>
+  </body>
+</html>
+<html>
+  <head>
+    <title>Multi-language Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+      /* CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        color: blue;
+      }
+      
+      p {
+        font-size: 16px;
+      }
+      
+      button {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      #output {
+        margin-top: 20px;
+      }
+    </style>
+    
+    <script>
+        function greet() {
+        var name = prompt("What's your name?");
+        var output = document.getElementById("output");
+        output.innerHTML = "Hello, " + name + "!";
+      }
+    </script>
+    
+  </head>
+  
+  <body>
